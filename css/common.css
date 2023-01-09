@@ -23,3 +23,9 @@ main {
     justify-content: center;
     align-items: center;
 }
+
+input, button {
+    outline: 0;
+    border: 0;
+    background-color: transparent;
+}

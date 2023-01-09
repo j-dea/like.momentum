@@ -14,7 +14,7 @@ const style = {
 const text = `
 %c J%cD%cE%cA %c Like Project 
 %c like.momentum 
-%chttps://github.com/jdea/like.momentum
+%chttps://github.com/j-dea/like.momentum
 `;
 
 const styles = [

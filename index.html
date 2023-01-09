@@ -7,8 +7,10 @@
     <title>Like Momentum</title>
     <link rel="icon" href="./images/icons/favicon.ico" />
     <link rel="stylesheet" href="./css/common.css" />
-    <script type="module" src="./src/log.js"></script>
+    <link rel="stylesheet" href="./css/main.css" />
     <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <script type="module" src="./src/log.js"></script>
+    <script type="module" src="./src/user.js"></script>
 </head>
 <body>
     <header>
@@ -20,10 +22,10 @@
         </div>
     </header>
     <main>
-        <form>
-            <label>Hello, what's your name?</label>
-            <input type="text" name="username" />
-            <button>Next</button>
+        <form id="login-form">
+            <label for="login-input">Hello, what's your name?</label>
+            <input id="login-input" placeholder=" " type="text" name="user" required />
+            <button class="transparent">Next</button>
         </form>
     </main>
     <footer>
@@ -37,6 +39,6 @@
             Todo
         </div>
     </footer>
-    <script src="./src/app.js"></script>
+    <script type="module" src="./src/app.js"></script>
 </body>
 </html>
