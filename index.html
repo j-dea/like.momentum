@@ -10,10 +10,9 @@
     <link rel="stylesheet" href="./css/main.css" />
     <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
     <script type="module" src="./src/log.js"></script>
-    <script type="module" src="./src/user.js"></script>
 </head>
 <body>
-    <header>
+    <header class="hidden">
         <div>
             저장된 Link
         </div>
@@ -22,15 +21,18 @@
         </div>
     </header>
     <main>
-        <form id="login-form">
+        <form id="login-form" class="hidden">
             <label for="login-input">Hello, what's your name?</label>
             <input id="login-input" placeholder=" " type="text" name="user" required />
             <button class="transparent">Next</button>
         </form>
+        <div id="greeting-container" class="hidden">
+            <h1 id="greeting"></h1>
+        </div>
     </main>
-    <footer>
+    <footer class="hidden">
         <div>
-            이미지 설정
+            <button id="logout-button">Logout</button>
         </div>
         <div>
             명언
