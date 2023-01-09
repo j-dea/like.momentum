@@ -47,6 +47,19 @@ body {
     background-color: #dddddd55;
 }
 
+#greeting-container {
+    text-align: center;
+}
+
 #greeting {
     color: white;
+    filter: drop-shadow(0 0 .25rem #33333355);
+}
+
+#clock {
+    font-size: 5rem;
+    font-weight: bold;
+    color: white;
+    user-select: none;
+    filter: drop-shadow(0 0 1rem #33333355);
 }

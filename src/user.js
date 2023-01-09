@@ -1,4 +1,4 @@
-import { selector } from './common.js';
+import { className, selector } from './common/common.js';
 import { currentPartsOfDay } from './time.js';
 
 const LOCALSTORAGE_KEY = 'user';
@@ -7,7 +7,7 @@ export const user = localStorage.getItem(LOCALSTORAGE_KEY);
 
 export const handleLogin = (e) => {
     e.preventDefault();
-    $(selector.loginForm).addClass('hidden');
+    $(selector.loginForm).addClass(className.hidden);
     const [username] = e.target;
     localStorage.setItem(LOCALSTORAGE_KEY, username.value);
     initialGreetings(username.value);
@@ -15,17 +15,17 @@ export const handleLogin = (e) => {
 
 export const handleLogout = () => {
     localStorage.removeItem(LOCALSTORAGE_KEY);
-    $(selector.greetingContainer).addClass('hidden');
-    $(selector.header).addClass('hidden');
-    $(selector.footer).addClass('hidden');
-    $(selector.loginForm).removeClass('hidden');
+    $(selector.greetingContainer).addClass(className.hidden);
+    $(selector.header).addClass(className.hidden);
+    $(selector.footer).addClass(className.hidden);
+    $(selector.loginForm).removeClass(seleclassNamector.hidden);
 }
 
 export const initialGreetings = (user) => {
     const time = currentPartsOfDay(new Date().getHours());
-    $(selector.header).removeClass('hidden');
-    $(selector.footer).removeClass('hidden');
-    $(selector.greetingContainer).removeClass('hidden');
+    $(selector.header).removeClass(className.hidden);
+    $(selector.footer).removeClass(className.hidden);
+    $(selector.greetingContainer).removeClass(className.hidden);
     $(selector.greeting).text(`Good ${time}, ${user}.`);
 }
 

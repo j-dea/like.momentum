@@ -1,3 +1,8 @@
+import { selector } from './common/common.js';
+import { padStart } from './common/util.js';
+
+let timer = null;
+
 export const currentPartsOfDay = (time) => {
     if(time >= 6 && time < 12) {
         return 'morning';
@@ -11,3 +16,19 @@ export const currentPartsOfDay = (time) => {
         return 'midnight';
     }
 }
+
+export const printTimer = () => {
+    const current = new Date();
+    $(selector.clock).text(`${padStart(current.getHours())}:${padStart(current.getMinutes())}:${padStart(current.getSeconds())}`);
+}
+
+export const startTimer = () => {
+    printTimer();
+    timer = setInterval(printTimer, 1000);
+}
+
+export const stopTimer = () => {
+    clearInterval(timer);
+}
+
+startTimer();
