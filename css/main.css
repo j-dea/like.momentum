@@ -49,6 +49,7 @@ body {
 }
 
 #greeting-container {
+    position: relative;
     text-align: center;
     color: white;
 }
@@ -62,4 +63,17 @@ body {
     font-weight: bold;
     user-select: none;
     filter: drop-shadow(0 0 1rem #33333355);
+}
+
+#focus-container {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#focus-container h1,
+#focus-container h2 {
+    margin: 0;
+    filter: drop-shadow(0 0 .25rem #33333355);
 }

@@ -1,5 +1,6 @@
 import { className, key, selector } from './common/common.js';
 import { currentPartsOfDay } from './time.js';
+import {handleSetFocus} from "./focus.js";
 
 export const user = localStorage.getItem(key.user);
 
@@ -9,6 +10,8 @@ export const handleLogin = (e) => {
     const [username] = e.target;
     localStorage.setItem(key.user, username.value);
     initialGreetings(username.value);
+    $(selector.focusForm).removeClass(className.hidden);
+    $(selector.focusForm).on('submit', handleSetFocus);
 }
 
 export const handleLogout = () => {
