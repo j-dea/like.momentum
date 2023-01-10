@@ -3,6 +3,7 @@ import { handleLogin, initialGreetings, user } from './user.js';
 import { focus, handleSetFocus, initialFocusContent } from "./focus.js";
 import {handleAddTodo, handleTodoVisible} from "./todo.js";
 import {initialAdvice} from "./advice.js";
+import {initialWeather} from "./weather.js";
 
 $(document).ready(() => {
     if(user === null) {
@@ -10,6 +11,7 @@ $(document).ready(() => {
         $(selector.loginForm).on('submit', handleLogin);
     } else {
         initialGreetings();
+        initialWeather();
         initialAdvice();
         $(selector.todoOpenBtn).click(handleTodoVisible)
         $(selector.todoForm).on('submit', handleAddTodo);

@@ -149,6 +149,24 @@ body {
     background-color: #dddddd55;
 }
 
+#weather-container {
+    display: flex;
+    flex-direction: column;
+}
+#weather-container > div {
+    display: flex;
+    align-items: center;
+}
+#weather-icon {
+    width: 2rem;
+}
+#weather-temp {
+    flex: 1;
+    text-align: right;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
 .btn {
     color: white;
 }

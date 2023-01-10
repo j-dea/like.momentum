@@ -16,6 +16,11 @@ export const selector = {
     todoList: '#todo-list',
     todoForm: '#todo-form',
     advice: '#advice',
+    weatherContainer: '#weather-container',
+    weatherIcon: '#weather-icon',
+    weatherTemp: '#weather-temp',
+    weather: '#weather',
+    weatherCity: '#weather-city',
     //
     todoItem: '.todo-item',
 }
