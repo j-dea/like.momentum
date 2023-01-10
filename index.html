@@ -41,13 +41,21 @@
     </main>
     <footer class="hidden">
         <div>
-            <button id="logout-button">Logout</button>
+            <button id="logout-button" class="btn">Logout</button>
         </div>
         <div>
             명언
         </div>
-        <div>
-            Todo
+        <div id="todo-container">
+            <button id="todo-open" class="btn">Todo</button>
+            <div class="list hidden-y">
+                <h4>Todo-list</h4>
+                <ul id="todo-list"></ul>
+                <form id="todo-form" class="form">
+                    <input type="text" name="newTodo" />
+                    <button>Add</button>
+                </form>
+            </div>
         </div>
     </footer>
     <script type="module" src="./src/app.js"></script>

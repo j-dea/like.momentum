@@ -12,6 +12,12 @@ body {
     box-sizing: border-box;
 }
 
+ul, li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
 header, footer{
     display: flex;
     justify-content: space-between;
@@ -31,6 +37,15 @@ input, button {
     background-color: transparent;
 }
 
+button {
+    cursor: pointer;
+}
+
 .hidden {
     display: none !important;
+}
+
+.hidden-y {
+    transform-origin: bottom;
+    transform: scaleY(0);
 }

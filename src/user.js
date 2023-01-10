@@ -1,6 +1,6 @@
 import { className, key, selector } from './common/common.js';
 import { currentPartsOfDay } from './time.js';
-import {handleSetFocus} from "./focus.js";
+import { handleSetFocus } from "./focus.js";
 
 export const user = localStorage.getItem(key.user);
 
@@ -17,6 +17,7 @@ export const handleLogin = (e) => {
 export const handleLogout = () => {
     localStorage.removeItem(key.user);
     localStorage.removeItem(key.focus);
+    localStorage.removeItem(key.todo);
     $(selector.greetingContainer).addClass(className.hidden);
     $(selector.header).addClass(className.hidden);
     $(selector.footer).addClass(className.hidden);
