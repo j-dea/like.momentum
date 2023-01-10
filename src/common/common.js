@@ -15,6 +15,7 @@ export const selector = {
     todoOpenBtn: '#todo-open',
     todoList: '#todo-list',
     todoForm: '#todo-form',
+    advice: '#advice',
     //
     todoItem: '.todo-item',
 }
