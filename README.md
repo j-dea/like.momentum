@@ -13,3 +13,5 @@
 - `Clock` 시간 표시
 - `Greeting` 사용자 이름을 입력하면 시간대에 맞는 인사
 - `TodayFocus` 오늘 집중해야할 것
+- `Todo` 할 일 목록 저장
+- `Weather` 현재 날씨 출력
