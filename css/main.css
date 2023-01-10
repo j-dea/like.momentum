@@ -4,20 +4,21 @@ body {
     background-size: cover;
 }
 
-#login-form {
+.form {
     display: flex;
     flex-direction: column;
     gap: .25rem;
 }
 
-#login-form label {
+.form label {
     color: white;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: bold;
     text-align: center;
+    filter: drop-shadow(0 0 .25rem #33333355);
 }
 
-#login-form input {
+.form input {
     color: white;
     font-size: 1.2rem;
     padding: .25rem;
@@ -26,16 +27,16 @@ body {
     transition-duration: .5s;
 }
 
-#login-form input:focus,
-#login-form input:not(:placeholder-shown) {
+.form input:focus,
+.form input:not(:placeholder-shown) {
     border-bottom: 2px solid white;
 }
 
-#login-form input:not(:placeholder-shown) + button {
+.form input:not(:placeholder-shown) + button {
     transform: scaleY(1);
 }
 
-#login-form button {
+.form button {
     color: white;
     transition-duration: .5s;
     padding: .25rem;
@@ -43,23 +44,22 @@ body {
     transform: scaleY(0);
 }
 
-#login-form button:hover {
+.form button:hover {
     background-color: #dddddd55;
 }
 
 #greeting-container {
     text-align: center;
+    color: white;
 }
 
 #greeting {
-    color: white;
     filter: drop-shadow(0 0 .25rem #33333355);
 }
 
 #clock {
     font-size: 5rem;
     font-weight: bold;
-    color: white;
     user-select: none;
     filter: drop-shadow(0 0 1rem #33333355);
 }

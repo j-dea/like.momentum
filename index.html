@@ -21,7 +21,7 @@
         </div>
     </header>
     <main>
-        <form id="login-form" class="hidden">
+        <form id="login-form" class="form hidden">
             <label for="login-input">Hello, what's your name?</label>
             <input id="login-input" placeholder=" " type="text" name="user" required />
             <button class="transparent">Next</button>
@@ -29,6 +29,14 @@
         <div id="greeting-container" class="hidden">
             <div id="clock"></div>
             <h1 id="greeting"></h1>
+            <form id="focus-form" class="form hidden">
+                <label for="focus-input">What is your main focus for today?</label>
+                <input id="focus-input" placeholder=" " type="text" name="focus" required />
+            </form>
+            <div id="focus-container" class="hidden">
+                <h2>TODAY</h2>
+                <h1 id="focus-content"></h1>
+            </div>
         </div>
     </main>
     <footer class="hidden">

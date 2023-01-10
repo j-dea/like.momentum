@@ -1,32 +1,35 @@
-import { className, selector } from './common/common.js';
+import { className, key, selector } from './common/common.js';
 import { currentPartsOfDay } from './time.js';
 
-const LOCALSTORAGE_KEY = 'user';
-
-export const user = localStorage.getItem(LOCALSTORAGE_KEY);
+export const user = localStorage.getItem(key.user);
 
 export const handleLogin = (e) => {
     e.preventDefault();
     $(selector.loginForm).addClass(className.hidden);
     const [username] = e.target;
-    localStorage.setItem(LOCALSTORAGE_KEY, username.value);
+    localStorage.setItem(key.user, username.value);
     initialGreetings(username.value);
 }
 
 export const handleLogout = () => {
-    localStorage.removeItem(LOCALSTORAGE_KEY);
+    localStorage.removeItem(key.user);
+    localStorage.removeItem(key.focus);
     $(selector.greetingContainer).addClass(className.hidden);
     $(selector.header).addClass(className.hidden);
     $(selector.footer).addClass(className.hidden);
-    $(selector.loginForm).removeClass(seleclassNamector.hidden);
+    $(selector.loginForm).removeClass(className.hidden);
 }
 
-export const initialGreetings = (user) => {
-    const time = currentPartsOfDay(new Date().getHours());
+export const initialGreetings = (newUser) => {
     $(selector.header).removeClass(className.hidden);
     $(selector.footer).removeClass(className.hidden);
     $(selector.greetingContainer).removeClass(className.hidden);
-    $(selector.greeting).text(`Good ${time}, ${user}.`);
+    paintGreeting(newUser);
+}
+
+export const paintGreeting = (newUser) => {
+    const time = currentPartsOfDay(new Date().getHours());
+    $(selector.greeting).text(`Good ${time}, ${user || newUser}.`);
 }
 
 $(selector.loginForm).on('submit', handleLogin);
