@@ -1,9 +1,9 @@
-import {selector} from "./common/common.js";
+import {className, selector} from "./common/common.js";
 
 const handelGeolocationSuccess = (position) => {
 	const {coords: {latitude, longitude}} = position;
-	console.log(latitude, longitude)
 	const url = `https://api.momentum.jdea.app:3000/weather?lat=${latitude}&lon=${longitude}`;
+	$(selector.weatherIcon).removeClass(className.hidden);
 	fetch(url)
 		.then(res => res.json())
 		.then(data => settingWeatherBlock(data))
