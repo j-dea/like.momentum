@@ -57,7 +57,7 @@ const handleCompleteTodo = (index, complete) => {
 }
 
 export const handleTodoVisible = () => {
-	$(`${selector.todoContainer} .list`).toggleClass(className.hiddenY);
+	$(`${selector.todoContainer} .list`).toggleClass(className.hiddenRB);
 }
 
 redrawTodo();

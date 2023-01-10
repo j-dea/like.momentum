@@ -49,3 +49,13 @@ button {
     transform-origin: bottom;
     transform: scaleY(0);
 }
+
+.hidden-x {
+    transform-origin: right;
+    transform: scaleX(0);
+}
+
+.hidden-rb {
+    transform-origin: bottom right;
+    transform: scale(0);
+}

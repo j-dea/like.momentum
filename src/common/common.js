@@ -22,7 +22,9 @@ export const selector = {
 
 export const className = {
     hidden: 'hidden',
-    hiddenY: 'hidden-y'
+    hiddenY: 'hidden-y',
+    hiddenX: 'hidden-x',
+    hiddenRB: 'hidden-rb',
 }
 
 export const key = {
