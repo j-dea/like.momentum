@@ -2,7 +2,7 @@ import { className, selector } from './common/common.js';
 import { handleLogin, initialGreetings, user } from './user.js';
 import { focus, handleSetFocus, initialFocusContent } from "./focus.js";
 import {handleAddTodo, handleTodoVisible} from "./todo.js";
-import {handleSetAdvice} from "./advice.js";
+import {initialAdvice} from "./advice.js";
 
 $(document).ready(() => {
     if(user === null) {
@@ -10,7 +10,7 @@ $(document).ready(() => {
         $(selector.loginForm).on('submit', handleLogin);
     } else {
         initialGreetings();
-        handleSetAdvice()
+        initialAdvice();
         $(selector.todoOpenBtn).click(handleTodoVisible)
         $(selector.todoForm).on('submit', handleAddTodo);
         if(focus === null) {
