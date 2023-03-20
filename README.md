@@ -1,5 +1,7 @@
 # Like Momentum
 
+<img width="1051" alt="image" src="https://user-images.githubusercontent.com/87294942/226338171-3ee6ef0c-0d00-4a34-aa81-804e04b0d4bf.png">
+
 ## 목표 🏆
 
 - 개인 대시보드 웹 어플리케이션 구현
